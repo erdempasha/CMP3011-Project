@@ -33,7 +33,7 @@ class CustomDataset(Dataset):
 
         self.annotations = [f.split('.')[0] for f in os.listdir(self.annotations_dir) if f.endswith('.xml')]
 
-        self.classes = {item: index for index, item in enumerate(classes, 1)}
+        self.classes = {item: index for index, item in enumerate(classes)}
 
     def __len__(self):
         return len(self.annotations)
